@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>javascript mod, div, remainder</title>
+</head>
+
+<body>
+<h1>JavaScript mod, div, remainder</h1>
+
+<form id="number">
+  <input type="number" id="num" step="0.01"> <input type="number" id="opr" step="0.01">
+
+  <input type="radio" name="calculation" id="mod" value="mod"> mod
+  <input type="radio" name="calculation" id="rem" value="rem"> remainder
+  <input type="radio" name="calculation" id="div" value="div"> div
+  
+  <input type="submit" value="calculate">
+</form>
+
+<p id="result"></p>
+
+<pre>
+  <code>
+function mod(num, mod) {
+    var remain = num % mod;
+    return Math.floor(remain >= 0 ? remain : remain + mod);
+}
+
+function remain(num, denom) {
+    return Math[num > 0 ? 'floor' : 'ceil'](num % denom);
+}
+
+function div(num, denom) {
+    return Math[num > 0 ? 'floor' : 'ceil'](num / denom);
+}
+  </code>
+</pre>
+<p>See <a href="http://www.sitecrafting.com/blog/modulus-remainder/">Modulus And Remainder Are Not The Same (Site Crafting)</a></p>
+
+<script src="js/mod-div-remainder.js"></script>
+
+</body>
+</html>
